@@ -1,0 +1,21 @@
+{
+  "name": "elodiecivera_3_01072021",
+  "version": "1.0.0",
+  "description": "OpenClassrooms - Parcours Développement Front-End : Projet 3\r Dynamisez une page web avec des animations CSS : “Ohmyfood”",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --no-source-map",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/"
+  },
+  "browserslist": "last 4 versions",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElodieC5/ElodieCivera_3_01072021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElodieC5/ElodieCivera_3_01072021/issues"
+  },
+  "homepage": "https://github.com/ElodieC5/ElodieCivera_3_01072021#readme"
+}
