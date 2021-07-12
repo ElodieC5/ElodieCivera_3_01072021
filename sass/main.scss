@@ -1,7 +1,12 @@
-img {
-	width: 250px;
-	height: auto;
-}
-header {
-	display: flex;
-}
+@import "./utils/variables";
+@import "./utils/mixins";
+
+@import "./base/base";
+@import "./base/typography";
+
+@import "./components/btn";
+
+@import "./layout/header";
+@import "./layout/container";
+
+
