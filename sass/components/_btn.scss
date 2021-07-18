@@ -22,7 +22,7 @@ input {
 	}
 }
 .fonctionne {
-	@include flexcenter;
+	@include flexposition;
 	height: 290px;
 	padding: 10px;
 	&__btn {
@@ -37,8 +37,13 @@ input {
 		justify-content: space-around;
 		align-items: center;
 		span {
+			width: 6%;
+			height: auto;
 			position: relative;
-			left: -25px;
+			left: -35px;
+			border-radius: 20px;
+			background-color: $colour-primary;
+			color: $colour-white;
 		}
 	}
 }

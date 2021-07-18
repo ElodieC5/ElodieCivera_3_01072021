@@ -1,0 +1,10 @@
+footer {
+    width: 100%;
+    background-color: $colour-black;
+    color: $colour-white;
+    @include flexposition (flex-start, left);
+   &__logo {
+       font-weight: bold;
+       font-style: italic;
+   }
+}

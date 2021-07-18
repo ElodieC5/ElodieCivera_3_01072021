@@ -10,6 +10,5 @@
 .explore__result {
 	height: 290px;
 	padding: 10px;
-	@include flexcenter;
+	@include flexposition;
 }
-

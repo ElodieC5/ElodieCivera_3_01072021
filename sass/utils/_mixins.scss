@@ -1,7 +1,7 @@
-@mixin flexcenter {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-flow: column wrap;
-    text-align: center;
+@mixin flexposition($flexposition: center, $textposition: center) {
+	display: flex;
+	justify-content: space-around;
+	align-items: $flexposition;
+	flex-flow: column wrap;
+	text-align: $textposition;
 }
