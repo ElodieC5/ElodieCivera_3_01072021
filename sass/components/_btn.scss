@@ -64,36 +64,34 @@
 	position: absolute;
 	right: 30px;
 
-	/*&.--empty {
-		opacity: 1;
-		&:hover,
-		&:active {
-			opacity: 0;
-		}
-	}*/
-
 	&.--full {
 		opacity: 0;
+		background: $colour-gradient;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 		&:hover,
 		&:active {
-			color: violet;
+			transform: scale(1.14);
 			opacity: 1;
-			transform-origin: bottom;
-			transition: opacity 2s cubic-bezier(0.55, 0.75, 0.55, 0.35);
+			transition: transform 1ms, opacity 400ms ease-in-out;
+		}
+	}
+}
 
-			/*background: linear-gradient(
+/*transform-origin: bottom;
+			transition: opacity 2s cubic-bezier(0.55, 0.75, 0.55, 0.35);*/
+
+/*background: linear-gradient(
 				to top left,
 				$colour-primary,
 				$colour-secondary
 			);
 			background-clip: text;
 			-webkit-text-fill-color: transparent;*/
-		}
-	}
-	/*
+
+/*
 	&::after {
 		color: $colour-primary;
 		opacity: 0;
 		
 	}*/
-}

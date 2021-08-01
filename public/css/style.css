@@ -117,37 +117,34 @@ p {
   font-size: 25px;
   position: absolute;
   right: 30px;
-  /*&.--empty {
-  	opacity: 1;
-  	&:hover,
-  	&:active {
-  		opacity: 0;
-  	}
-  }*/
-  /*
-  &::after {
-  	color: $colour-primary;
-  	opacity: 0;
-
-  }*/
 }
 .restaurants__carte__heading i.--full {
   opacity: 0;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .restaurants__carte__heading i.--full:hover, .restaurants__carte__heading i.--full:active {
-  color: violet;
+  transform: scale(1.14);
   opacity: 1;
-  transform-origin: bottom;
-  transition: opacity 2s cubic-bezier(0.55, 0.75, 0.55, 0.35);
-  /*background: linear-gradient(
-  	to top left,
-  	$colour-primary,
-  	$colour-secondary
-  );
-  background-clip: text;
-  -webkit-text-fill-color: transparent;*/
+  transition: transform 1ms, opacity 400ms ease-in-out;
 }
 
+/*transform-origin: bottom;
+			transition: opacity 2s cubic-bezier(0.55, 0.75, 0.55, 0.35);*/
+/*background: linear-gradient(
+				to top left,
+				$colour-primary,
+				$colour-secondary
+			);
+			background-clip: text;
+			-webkit-text-fill-color: transparent;*/
+/*
+	&::after {
+		color: $colour-primary;
+		opacity: 0;
+
+	}*/
 header {
   width: 100%;
   height: 65px;
