@@ -48,6 +48,11 @@ p {
   box-shadow: 0px 7px 7px lightgrey;
   font-weight: bold;
 }
+.btn:hover, .btn:active {
+  opacity: 0.8;
+  box-shadow: 0px 10px 10px #6d6d6d;
+  cursor: pointer;
+}
 
 .fonctionne {
   display: flex;
@@ -112,14 +117,35 @@ p {
   font-size: 25px;
   position: absolute;
   right: 30px;
+  /*&.--empty {
+  	opacity: 1;
+  	&:hover,
+  	&:active {
+  		opacity: 0;
+  	}
+  }*/
+  /*
+  &::after {
+  	color: $colour-primary;
+  	opacity: 0;
+
+  }*/
 }
-.restaurants__carte__heading i:hover::after, .restaurants__carte__heading i:active::after {
-  opacity: 1;
-}
-.restaurants__carte__heading i::after {
-  background-color: #9356DC;
+.restaurants__carte__heading i.--full {
   opacity: 0;
-  transition: opacity 250ms;
+}
+.restaurants__carte__heading i.--full:hover, .restaurants__carte__heading i.--full:active {
+  color: violet;
+  opacity: 1;
+  transform-origin: bottom;
+  transition: opacity 2s cubic-bezier(0.55, 0.75, 0.55, 0.35);
+  /*background: linear-gradient(
+  	to top left,
+  	$colour-primary,
+  	$colour-secondary
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;*/
 }
 
 header {

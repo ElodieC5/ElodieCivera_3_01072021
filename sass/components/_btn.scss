@@ -3,14 +3,16 @@
 	height: 50px;
 	border: none;
 	border-radius: 30px;
-	background: linear-gradient(
-		to bottom right,
-		$colour-secondary,
-		$colour-primary
-	);
+	background: $colour-gradient;
 	color: $colour-white;
 	box-shadow: 0px 7px 7px $colour-grey;
 	font-weight: bold;
+	&:hover,
+	&:active {
+		opacity: 0.8;
+		box-shadow: 0px 10px 10px darken($colour-grey, 40%);
+		cursor: pointer;
+	}
 }
 .fonctionne {
 	@include flexposition(space-around, flex-start, center, column nowrap);
@@ -18,7 +20,7 @@
 	margin: 5%;
 	&__btn {
 		@include flexposition(flex-start, center, center, row nowrap);
-		position: relative;/*conditionne position i h & span*/
+		position: relative; /*conditionne position i h & span*/
 		width: 100%;
 		height: 50px;
 		border: none;
@@ -61,15 +63,37 @@
 	font-size: 25px;
 	position: absolute;
 	right: 30px;
-	&:hover,
-	&:active {
-		&::after {
+
+	/*&.--empty {
+		opacity: 1;
+		&:hover,
+		&:active {
+			opacity: 0;
+		}
+	}*/
+
+	&.--full {
+		opacity: 0;
+		&:hover,
+		&:active {
+			color: violet;
 			opacity: 1;
+			transform-origin: bottom;
+			transition: opacity 2s cubic-bezier(0.55, 0.75, 0.55, 0.35);
+
+			/*background: linear-gradient(
+				to top left,
+				$colour-primary,
+				$colour-secondary
+			);
+			background-clip: text;
+			-webkit-text-fill-color: transparent;*/
 		}
 	}
+	/*
 	&::after {
-		background-color: $colour-primary;
+		color: $colour-primary;
 		opacity: 0;
-		transition: opacity 250ms;
-	}
+		
+	}*/
 }

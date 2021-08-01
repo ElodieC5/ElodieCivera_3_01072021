@@ -1,6 +1,11 @@
 $colour-primary: #9356DC;
 $colour-secondary: #FF79DA;
 $colour-tertiary: #99E2D0;
+$colour-gradient: linear-gradient(
+    to bottom right,
+    $colour-secondary,
+    $colour-primary
+);
 $colour-white: white;
 $colour-grey: lightgrey;
 $colour-black: black;
