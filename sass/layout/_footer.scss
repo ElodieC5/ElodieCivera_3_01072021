@@ -11,6 +11,7 @@ footer {
 		&__li {
 			@include flexposition(flex-start, flex-start, left, row nowrap);
             padding-bottom: 10px;
+			font-size: 14px;
 		}
         &__li--bold {
         font-weight: bold;

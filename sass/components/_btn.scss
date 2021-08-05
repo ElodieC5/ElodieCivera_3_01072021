@@ -61,12 +61,14 @@
 }
 .restaurants__carte__heading i {
 	font-size: 25px;
+	color: $colour-grey;
 	position: absolute;
 	right: 30px;
 
 	&.--full {
 		opacity: 0;
 		background: $colour-gradient;
+		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		&:hover,
