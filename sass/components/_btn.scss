@@ -59,9 +59,10 @@
 		@include flexposition(left, flex-start, row nowrap);
 	}
 }
-.restaurants__carte__heading i {
+
+.restaurants__carte__heading i, .menu__details i {
 	font-size: 25px;
-	color: $colour-grey;
+	color: $colour-black;
 	position: absolute;
 	right: 30px;
 
