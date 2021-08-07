@@ -42,6 +42,44 @@ strong {
   font-size: 14px;
 }
 
+#checked {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  flex-flow: column wrap;
+  width: 60px;
+  height: 60px;
+  background-color: #99E2D0;
+  color: white;
+}
+#checked > .fa-check-circle {
+  position: absolute;
+  top: 20%;
+  right: -20%;
+  text-align: center;
+  background-color: #99E2D0;
+  color: white;
+}
+#checked:hover, #checked:active {
+  cursor: pointer;
+}
+
+/*transform-origin: right center;
+    animation-fill-mode: forwards;
+    transition-delay: 0.25s;
+    background-color: #99E2D0;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-right: -70px;
+    margin-left: 2rem;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: margin-right 0.4s;
+}
+*/
 .btn {
   width: 220px;
   height: 50px;
@@ -285,7 +323,7 @@ input::placeholder {
   padding-bottom: 5px;
 }
 .menu__details i {
-  top: 20px;
+  top: 25px;
 }
 .menu__details .btn {
   margin: 40px;

@@ -1,0 +1,34 @@
+#checked {
+    @include flexposition;
+    width: 60px;
+    height: 60px;
+    background-color: $colour-tertiary;
+    color: $colour-white;
+    & > .fa-check-circle {
+        position: absolute;
+        top: 20%;
+        right: -20%;
+        text-align: center;
+        background-color: $colour-tertiary;
+        color: $colour-white;
+    }
+    &:hover, &:active {
+        cursor: pointer;
+
+    }
+}
+/*transform-origin: right center;
+    animation-fill-mode: forwards;
+    transition-delay: 0.25s;
+    background-color: #99E2D0;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-right: -70px;
+    margin-left: 2rem;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: margin-right 0.4s;
+}
+*/
