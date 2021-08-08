@@ -1,34 +1,41 @@
 #checked {
-    @include flexposition;
-    width: 60px;
-    height: 60px;
-    background-color: $colour-tertiary;
-    color: $colour-white;
-    & > .fa-check-circle {
-        position: absolute;
-        top: 20%;
-        right: -20%;
-        text-align: center;
-        background-color: $colour-tertiary;
-        color: $colour-white;
-    }
-    &:hover, &:active {
-        cursor: pointer;
-
-    }
+	@include flexposition;
+	width: 60px;
+	height: inherit;
+	border-radius: 0 20px 20px 0;
+	background-color: $colour-tertiary;
+	color: $colour-white;
+	position: relative;
+	transform: scaleX(0);
+	transform-origin: 100%;
+	opacity: 0;
+	& > .fa-check-circle {
+		background-color: $colour-tertiary;
+		color: $colour-white;
+	}
 }
-/*transform-origin: right center;
-    animation-fill-mode: forwards;
-    transition-delay: 0.25s;
-    background-color: #99E2D0;
-    border-bottom-right-radius: 15px;
-    border-top-right-radius: 15px;
-    margin-right: -70px;
-    margin-left: 2rem;
-    width: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: margin-right 0.4s;
+.menu__details__dishes {
+	&:hover,
+	&:active {
+		& h3,
+		p {
+			max-width: 70%;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		& strong {
+			right: 90px;
+			transition: right 1s cubic-bezier(0.5, -0.3, 0.9, 1.2);
+		}
+		& #checked {
+			transform: scaleX(1);
+			transition: transform 1s cubic-bezier(0.5, -0.3, 0.9, 1.2);
+			opacity: 1;
+			& > .fa-check-circle {
+				transform: rotate(-360deg);
+				transition: transform 0.9s 0.4s ease-in-out;
+			}
+		}
+	}
 }
-*/
