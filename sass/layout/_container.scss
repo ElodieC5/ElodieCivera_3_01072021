@@ -16,9 +16,9 @@ input {
 	}
 }
 .explore__result {
-	@include flexposition;
+	@include flexposition(space-between, center, center, column);
 	height: 300px;
-	padding: 13%;
+	padding: 13%; // jouer sur padding pour responsive //
 	background-color: lighten($colour-grey, 12%);
 }
 .restaurants {
@@ -41,7 +41,7 @@ input {
 			height: 175px;
 			object-fit: cover;
 			border-radius: 20px 20px 0 0;
-		}
+		}	
 		& span {
 			position: absolute;
 			top: 5%;
