@@ -193,21 +193,21 @@ header {
   width: 100%;
   height: 60px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  flex-flow: column wrap;
+  flex-flow: row nowrap;
 }
-header i {
+header .back {
+  position: absolute;
+  left: 15px;
   font-size: 24px;
   font-weight: bold;
-  position: absolute;
-  top: 25px;
-  left: 20px;
 }
-header img {
-  width: 220px;
-  height: 40px;
+header .__logo {
+  max-width: 50%;
+  height: auto;
+  font: 2em "Shrikhand";
 }
 
 /* PAGE PPALE / index.html */
