@@ -1,7 +1,7 @@
 footer {
+	@include dark-grey(55%);
 	width: 100%;
 	padding: 5%;
-	background-color: darken($colour-grey, 55%);
 	color: $colour-white;
 	.footer {
 		&__logo {

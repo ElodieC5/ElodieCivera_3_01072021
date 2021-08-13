@@ -5,9 +5,9 @@
 	text-align: $textposition;
 	flex-flow: $flexflow;
 }
-@mixin lighten-grey($rate: 12%) {
+@mixin light-grey($rate: 12%) {
 	background-color: lighten($colour-grey, $rate);
 }
-@mixin darken-grey($rate: 40%) {
-	background-color: lighten($colour-grey, $rate);
+@mixin dark-grey($rate: 40%) {
+	background-color: darken($colour-grey, $rate);
 }

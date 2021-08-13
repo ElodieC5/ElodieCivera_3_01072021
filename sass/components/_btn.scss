@@ -59,31 +59,3 @@
 		@include flexposition(left, flex-start, row nowrap);
 	}
 }
-
-.restaurants__carte__heading .fa-heart,
-.menu__details .fa-heart {
-	font-size: 25px;
-	color: $colour-grey;
-	position: absolute;
-	right: 30px;
-	&.--full {
-		opacity: 0;
-		transform: scale(0.1, 0.1);
-		background: $colour-gradient;
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		transition: opacity 800ms cubic-bezier(0.5, -0.3, 0.9, 1.2),
-			transform 1.5s 100ms cubic-bezier(0.5, -0.3, 0.9, 1.2);
-		transform-origin: bottom;
-	}
-	/*c'est le hover sur l'empty qui déclenche la transition du full*/
-	&.--empty {
-		&:hover {
-			+ .--full {
-				opacity: 1;
-				transform: scale(1);
-			}
-		}
-	}
-}
