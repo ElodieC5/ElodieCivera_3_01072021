@@ -44,6 +44,51 @@ strong {
   padding: 5px;
 }
 
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  width: 100%;
+  margin: auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+p {
+  font-size: 14px;
+}
+
+strong {
+  font-size: 14px;
+  padding: 5px;
+}
+
 /* REMPLISSAGE COEURS */
 .restaurants__carte__heading .fa-heart,
 .menu__details .fa-heart {
@@ -245,33 +290,40 @@ strong {
   left: 0;
   background-color: white;
   cursor: wait;
-  font-family: "Shrikhand";
-  text-shadow: 0 0 lightgrey, 11ch 0 #9356DC, 22ch 0 #FF79DA, 33ch 0 #99E2D0, 44ch 0 lightgrey;
-  animation: loading 4s;
+  text-shadow: 0 0 lightgrey, 4em 0 #9356DC, 8em 0 #FF79DA, 12em 0 #99E2D0, 16em 0 lightgrey;
+  animation: loading 10s 1s both;
+}
+.loader span {
+  font: 1em "Shrikhand";
 }
 
 @keyframes loading {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    text-shadow: -8em 0 lightgrey, -4em 0 #9356DC, 0em 0 #FF79DA, 4em 0 #99E2D0, 8em 0 lightgrey;
+  }
   25% {
     opacity: 1;
     visibility: visible;
-    text-shadow: -11ch 0 lightgrey, 0ch 0 #9356DC, 11ch 0 #FF79DA, 22ch 0 #99E2D0, 33ch 0 lightgrey;
+    text-shadow: -2em 0 lightgrey, 0em 0 #9356DC, 2em 0 #FF79DA, 4em 0 #99E2D0, 6em 0 lightgrey;
   }
   50% {
     opacity: 1;
     visibility: visible;
-    text-shadow: -22ch 0 lightgrey, -11ch 0 #9356DC, 0ch 0 #FF79DA, 11ch 0 #99E2D0, 22ch 0 lightgrey;
+    text-shadow: -4em 0 lightgrey, -2em 0 #9356DC, 0em 0 #FF79DA, 2em 0 #99E2D0, 4em 0 lightgrey;
   }
   75% {
     opacity: 1;
     visibility: visible;
-    text-shadow: -33ch 0 lightgrey, -22ch 0 #9356DC, -11ch 0 #FF79DA, 0ch 0 #99E2D0, 11ch 0 lightgrey;
+    text-shadow: -6em 0 lightgrey, -4em 0 #9356DC, -2em 0 #FF79DA, 0em 0 #99E2D0, 2em 0 lightgrey;
   }
-  90% {
-    visibility: visible;
-    text-shadow: -44ch 0 lightgrey, -33ch 0 #9356DC, -22ch 0 #FF79DA, -11ch 0 #99E2D0, 0ch 0 lightgrey;
+  99% {
+    opacity: 1;
   }
   100% {
     opacity: 0;
+    text-shadow: -8em 0 lightgrey, -4em 0 #9356DC, 0em 0 #FF79DA, 4em 0 #99E2D0, 8em 0 lightgrey;
   }
 }
 header {

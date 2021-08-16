@@ -51,36 +51,47 @@
 	left: 0;
 	background-color: white;
 	cursor: wait;
-	font-family: "Shrikhand";
-	text-shadow: 0 0 $colour-grey, 11ch 0 $colour-primary,
-		22ch 0 $colour-secondary, 33ch 0 $colour-tertiary, 44ch 0 $colour-grey;
-	animation: loading 4s;
+	& span {
+		font: 1em "Shrikhand";
+	}
+	text-shadow: 0 0 $colour-grey, 4em 0 $colour-primary, 8em 0 $colour-secondary,
+		12em 0 $colour-tertiary, 16em 0 $colour-grey;
+	animation: loading 10s 1s both;
 }
 @keyframes loading {
+	0% {
+		opacity: 1;
+		visibility: visible;
+		text-shadow: -8em 0 $colour-grey, -4em 0 $colour-primary,
+			0em 0 $colour-secondary, 4em 0 $colour-tertiary, 8em 0 $colour-grey;
+	}
 	25% {
 		opacity: 1;
 		visibility: visible;
-		text-shadow: -11ch 0 $colour-grey, 0ch 0 $colour-primary,
-			11ch 0 $colour-secondary, 22ch 0 $colour-tertiary, 33ch 0 $colour-grey;
+
+		text-shadow: -2em 0 $colour-grey, 0em 0 $colour-primary,
+			2em 0 $colour-secondary, 4em 0 $colour-tertiary, 6em 0 $colour-grey;
 	}
 	50% {
 		opacity: 1;
 		visibility: visible;
-		text-shadow: -22ch 0 $colour-grey, -11ch 0 $colour-primary,
-			0ch 0 $colour-secondary, 11ch 0 $colour-tertiary, 22ch 0 $colour-grey;
+
+		text-shadow: -4em 0 $colour-grey, -2em 0 $colour-primary,
+			0em 0 $colour-secondary, 2em 0 $colour-tertiary, 4em 0 $colour-grey;
 	}
 	75% {
 		opacity: 1;
 		visibility: visible;
-		text-shadow: -33ch 0 $colour-grey, -22ch 0 $colour-primary,
-			-11ch 0 $colour-secondary, 0ch 0 $colour-tertiary, 11ch 0 $colour-grey;
+
+		text-shadow: -6em 0 $colour-grey, -4em 0 $colour-primary,
+			-2em 0 $colour-secondary, 0em 0 $colour-tertiary, 2em 0 $colour-grey;
 	}
-	90% {
-		visibility: visible;
-		text-shadow: -44ch 0 $colour-grey, -33ch 0 $colour-primary,
-			-22ch 0 $colour-secondary, -11ch 0 $colour-tertiary, 0ch 0 $colour-grey;
+	99% {
+		opacity: 1;
 	}
 	100% {
 		opacity: 0;
+		text-shadow: -8em 0 $colour-grey, -4em 0 $colour-primary,
+			0em 0 $colour-secondary, 4em 0 $colour-tertiary, 8em 0 $colour-grey;
 	}
 }
