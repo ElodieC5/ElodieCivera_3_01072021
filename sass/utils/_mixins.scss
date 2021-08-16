@@ -1,4 +1,9 @@
-@mixin flexposition($flexjustify: space-around, $flexalign: center, $textposition: center, $flexflow: column wrap) {
+@mixin flexposition(
+	$flexjustify: space-around,
+	$flexalign: center,
+	$textposition: center,
+	$flexflow: column wrap
+) {
 	display: flex;
 	justify-content: $flexjustify;
 	align-items: $flexalign;
@@ -10,4 +15,29 @@
 }
 @mixin dark-grey($rate: 40%) {
 	background-color: darken($colour-grey, $rate);
+}
+@mixin mobile {
+	@media (max-width: 599px) {
+		@content;
+	}
+}
+@mixin tablet-portrait-up {
+	@media (min-width: 600px) {
+		@content;
+	}
+}
+@mixin tablet-landscape-up {
+	@media (min-width: 900px) {
+		@content;
+	}
+}
+@mixin desktop-up {
+	@media (min-width: 1200px) {
+		@content;
+	}
+}
+@mixin big-desktop-up {
+	@media (min-width: 1800px) {
+		@content;
+	}
 }

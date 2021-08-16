@@ -7,13 +7,13 @@
   list-style: none;
 }
 
-main {
+body {
   width: 100%;
   margin: auto;
 }
 
 img {
-  width: 375px;
+  width: 100%;
   height: auto;
 }
 
@@ -189,6 +189,91 @@ strong {
   flex-flow: column wrap;
 }
 
+/*.loader {
+    @include flexposition;
+    z-index: 9;
+    position: fixed;
+    width: 100%;
+    height:100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    cursor: wait;
+    &.__1 {
+        font: "shrikhand" 3em bold;
+        color: $colour-primary;
+        animation: loading 1s 200ms ease-in-out backwards;
+    }
+    &.__2 {
+        font: 3em "shrikhand";
+        color: $colour-secondary;
+        animation: loading 1s 400ms ease-in-out backwards;
+    }
+    &.__3 {
+        font: 3em "shrikhand";
+        color: $colour-tertiary;
+        animation: loading 1s 600ms ease-in-out backwards;
+    }
+}
+
+@keyframes loading {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+        visibility: collapse;
+
+    }
+}*/
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-flow: column wrap;
+  z-index: 9;
+  visibility: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  cursor: wait;
+  font-family: "Shrikhand";
+  text-shadow: 0 0 lightgrey, 11ch 0 #9356DC, 22ch 0 #FF79DA, 33ch 0 #99E2D0, 44ch 0 lightgrey;
+  animation: loading 4s;
+}
+
+@keyframes loading {
+  25% {
+    opacity: 1;
+    visibility: visible;
+    text-shadow: -11ch 0 lightgrey, 0ch 0 #9356DC, 11ch 0 #FF79DA, 22ch 0 #99E2D0, 33ch 0 lightgrey;
+  }
+  50% {
+    opacity: 1;
+    visibility: visible;
+    text-shadow: -22ch 0 lightgrey, -11ch 0 #9356DC, 0ch 0 #FF79DA, 11ch 0 #99E2D0, 22ch 0 lightgrey;
+  }
+  75% {
+    opacity: 1;
+    visibility: visible;
+    text-shadow: -33ch 0 lightgrey, -22ch 0 #9356DC, -11ch 0 #FF79DA, 0ch 0 #99E2D0, 11ch 0 lightgrey;
+  }
+  90% {
+    visibility: visible;
+    text-shadow: -44ch 0 lightgrey, -33ch 0 #9356DC, -22ch 0 #FF79DA, -11ch 0 #99E2D0, 0ch 0 lightgrey;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 header {
   width: 100%;
   height: 60px;
