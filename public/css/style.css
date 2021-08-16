@@ -115,6 +115,28 @@ strong {
   transform: scale(1);
 }
 
+/* DECOUVERTE DETAILS DU MENU */
+.menu__details__courses {
+  animation: detailing 3s both cubic-bezier(0.5, -0.3, 0.9, 1.2);
+}
+.menu__details__courses--1 {
+  animation-delay: 1.1s;
+}
+.menu__details__courses--2 {
+  animation-delay: 2.2s;
+}
+.menu__details__courses--3 {
+  animation-delay: 3.3s;
+}
+
+@keyframes detailing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* SELECTION PLATS */
 #checked {
   display: flex;
@@ -234,45 +256,7 @@ strong {
   flex-flow: column wrap;
 }
 
-/*.loader {
-    @include flexposition;
-    z-index: 9;
-    position: fixed;
-    width: 100%;
-    height:100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    cursor: wait;
-    &.__1 {
-        font: "shrikhand" 3em bold;
-        color: $colour-primary;
-        animation: loading 1s 200ms ease-in-out backwards;
-    }
-    &.__2 {
-        font: 3em "shrikhand";
-        color: $colour-secondary;
-        animation: loading 1s 400ms ease-in-out backwards;
-    }
-    &.__3 {
-        font: 3em "shrikhand";
-        color: $colour-tertiary;
-        animation: loading 1s 600ms ease-in-out backwards;
-    }
-}
-
-@keyframes loading {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-        visibility: collapse;
-
-    }
-}*/
+/* loader chargement index.html */
 .loader {
   display: flex;
   justify-content: center;
@@ -291,7 +275,7 @@ strong {
   background-color: white;
   cursor: wait;
   text-shadow: 0 0 lightgrey, 4em 0 #9356DC, 8em 0 #FF79DA, 12em 0 #99E2D0, 16em 0 lightgrey;
-  animation: loading 10s 1s both;
+  animation: loading 5s 1s both;
 }
 .loader span {
   font: 1em "Shrikhand";
