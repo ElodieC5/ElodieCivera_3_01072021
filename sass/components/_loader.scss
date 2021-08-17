@@ -14,22 +14,18 @@
 	background-color: white;
 	cursor: wait;
 	& span {
-		font: 40px "Shrikhand";
+		font: 25px "Shrikhand";
 	}
-	// text-shadow: 0 0 $colour-grey, 4em 0 $colour-primary, 8em 0 $colour-secondary,
-	// 	12em 0 $colour-tertiary, 16em 0 $colour-grey;
-	// animation: loading 5s 1s both;
-
-	text-shadow: 0 0 $colour-grey, 15% 0 $colour-primary, 19% 0 $colour-secondary,
-		23% 0 $colour-tertiary, 27% 0 $colour-grey;
+	text-shadow: 0 0 $colour-grey, 4em 0 $colour-primary, 8em 0 $colour-secondary,
+		12em 0 $colour-tertiary, 16em 0 $colour-grey;
 	animation: loading 5s 1s both;
 }
 @keyframes loading {
 	0% {
 		opacity: 1;
 		visibility: visible;
-		text-shadow: -10% 0 $colour-grey, 8% 0 $colour-primary,
-			0em 0 $colour-secondary, 4% 0 $colour-tertiary, 8% 0 $colour-grey;
+		text-shadow: -8em 0 $colour-grey, -4em 0 $colour-primary,
+			0em 0 $colour-secondary, 4em 0 $colour-tertiary, 8em 0 $colour-grey;
 	}
 	25% {
 		opacity: 1;

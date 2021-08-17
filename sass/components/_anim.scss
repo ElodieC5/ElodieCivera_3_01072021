@@ -15,8 +15,8 @@
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
-		transition: opacity 800ms cubic-bezier(0.5, -0.1, 0.9, 1.2),
-			transform 1.5s 100ms cubic-bezier(0.5, -0.1, 0.9, 1.2);
+		transition: opacity 900ms cubic-bezier(0.5, -0.1, 0.9, 1.2),
+			transform 800ms 10ms cubic-bezier(0.5, -0.1, 0.9, 1.2);
 		transform-origin: bottom;
 	}
 	/* c'est le hover sur l'empty qui déclenche la transition du full */
@@ -37,7 +37,7 @@
 
 	@for $i from 1 through 3 {
 		&--#{$i} {
-			animation-delay: #{$i * 0.1s + $i};
+			animation-delay: #{$i * 0.05s + $i};
 		}
 	}
 }

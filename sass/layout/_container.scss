@@ -95,7 +95,23 @@ input {
 .menu {
 	@include light-grey;
 	width: 100%;
-}
+	& img {
+		width: 100%;
+		height: auto;
+			@include tablet {
+				width: 80%;
+				border-radius: 50%;
+				margin: 0 10%;
+			}
+			@include big-desktop {
+				width: 60%;
+				margin: 0 20%;
+			}
+		}
+		@include tablet {
+			@include dark-grey;
+		}
+	}
 
 .menu__details {
 	@include flexposition(space-between, flex-start, flex-start, column wrap);
