@@ -1,5 +1,5 @@
 * {
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -12,44 +12,54 @@ body {
 main {
 	width: 100%;
 	margin: auto;
+	@include big-desktop {
+		width: 80%;
+	}
 }
 img {
 	width: 100%;
 	height: auto;
+	@include tablet {
+		width: 80%;
+		margin: 0 10%;
+		border-radius: 50%;
+	}
 }
 a {
 	text-decoration: none;
 	color: inherit;
 	cursor: pointer;
 }
+h1 {
+	font-size: 24px;
+}
 h2 {
-    font-size: 18px;
-	@include tablet-portrait {
+	font-size: 18px;
+	@include tablet {
 		font-size: 22px;
 	}
 }
 h3 {
-    font-size: 16px;
-	@include tablet-portrait {
+	font-size: 16px;
+	@include tablet {
 		font-size: 20px;
 	}
 }
 h4 {
-    font-size: 14px;
-	@include tablet-portrait {
+	font-size: 14px;
+	@include tablet {
 		font-size: 18px;
 	}
 }
 p {
 	font-size: 14px;
-	@include tablet-portrait {
+	@include tablet {
 		font-size: 18px;
 	}
 }
 strong {
 	font-size: 14px;
-	@include tablet-portrait {
+	@include tablet {
 		font-size: 18px;
 	}
 }
-
