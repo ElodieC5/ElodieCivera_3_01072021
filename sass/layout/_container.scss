@@ -97,7 +97,8 @@ input {
 	width: 100%;
 	& img {
 		width: 100%;
-		height: auto;
+		max-height: 400px;
+		object-fit: cover;
 			@include tablet {
 				width: 80%;
 				border-radius: 50%;
@@ -109,7 +110,7 @@ input {
 			}
 		}
 		@include tablet {
-			@include dark-grey;
+			background-color: $colour-tertiary;
 		}
 	}
 

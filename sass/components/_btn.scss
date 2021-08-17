@@ -17,6 +17,11 @@
 		box-shadow: 0px 10px 10px darken($colour-grey, 40%);
 		cursor: pointer;
 	}
+	@include tablet {
+		width: 250px;
+		height: 65px;
+		font-size: 16px;
+	}
 }
 
 

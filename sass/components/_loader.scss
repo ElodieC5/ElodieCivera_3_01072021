@@ -18,7 +18,7 @@
 	}
 	text-shadow: 0 0 $colour-grey, 4em 0 $colour-primary, 8em 0 $colour-secondary,
 		12em 0 $colour-tertiary, 16em 0 $colour-grey;
-	animation: loading 5s 1s both;
+	animation: loading 3s 1s both;
 }
 @keyframes loading {
 	0% {
