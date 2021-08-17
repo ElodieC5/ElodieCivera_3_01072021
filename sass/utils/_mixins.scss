@@ -1,3 +1,5 @@
+/* MIXINS */
+
 @mixin flexposition(
 	$flexjustify: space-around,
 	$flexalign: center,
@@ -10,12 +12,16 @@
 	text-align: $textposition;
 	flex-flow: $flexflow;
 }
+
 @mixin light-grey($rate: 12%) {
 	background-color: lighten($colour-grey, $rate);
 }
 @mixin dark-grey($rate: 40%) {
 	background-color: darken($colour-grey, $rate);
 }
+
+	/* MEDIA QUERIES */
+
 @mixin mobile {
 	@media (max-width: 370px) {
 		@content;
@@ -26,11 +32,6 @@
 		@content;
 	}
 }
-// @mixin tablet-landscape {
-// 	@media (min-width: 900px) {
-// 		@content;
-// 	}
-// }
 @mixin desktop {
 	@media (min-width: 1100px) {
 		@content;

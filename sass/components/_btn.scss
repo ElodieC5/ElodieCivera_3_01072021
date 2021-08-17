@@ -1,3 +1,7 @@
+/* BOUTONS & ASSIMILES */
+
+	/* bouton dégradé rose & violet */
+
 .btn {
 	width: 220px;
 	height: 50px;
@@ -14,6 +18,8 @@
 		cursor: pointer;
 	}
 }
+
+
 .fonctionne {
 	@include flexposition(space-around, flex-start, center, column nowrap);
 	height: 300px;
@@ -22,6 +28,8 @@
 		align-items: center;
 		height: 350px;
 	}
+
+	/* bouton gris du fonctionnement du site */
 
 	&__btn {
 		@include flexposition(flex-start, center, center, row nowrap);
@@ -68,7 +76,7 @@
 			text-align: center;
 		}
 	}
-	&__heading {
-		@include flexposition(left, flex-start, row nowrap);
-	}
+	// &__heading {
+	// 	@include flexposition(left, flex-start, row nowrap);
+	// }
 }
