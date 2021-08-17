@@ -11,6 +11,10 @@
 		font-size: 18px;
 		width: 50px;
 	}
+	@include tablet-portrait {
+		height: 70px;
+		padding: 10px 40%;
+	}
 }
 input {
 	background-color: $colour-grey;
@@ -29,7 +33,10 @@ input {
 	@include flexposition(space-between, center, center, column);
 	@include light-grey;
 	height: 300px;
-	padding: 13%; // jouer sur padding pour responsive //
+	padding: 13%;
+	@include tablet-portrait {
+		padding: 8%;
+	}
 }
 
 /* DETAILS DES RESULTATS */
@@ -40,6 +47,10 @@ input {
 	width: 100%;
 	height: 1230px;
 	padding: 5%;
+	@include tablet-portrait {
+		align-items: center;
+		padding: 5% 25%;
+	}
 	&__carte,
 	a {
 		position: relative;
@@ -54,7 +65,7 @@ input {
 			height: 175px;
 			object-fit: cover;
 			border-radius: 20px 20px 0 0;
-		}	
+		}
 		& span {
 			position: absolute;
 			top: 5%;
@@ -77,54 +88,60 @@ input {
 
 .menu {
 	@include light-grey;
+	width: 100%;
 }
 
 .menu__details {
-	@include flexposition (space-between,flex-start,flex-start,column wrap);
+	@include flexposition(space-between, flex-start, flex-start, column wrap);
 	@include light-grey;
 	position: relative;
 	top: -60px;
-	padding: 20px;
+	padding: 5%;
 	border: 1px $colour-grey;
-		border-radius: 30px 30px 0 0;
-		& h1 {
-			height: 50px;
-			font-family: "shrikhand";
-		}
-		& h2 {
-			display: block;
-			width: 40px;
-			font-weight: normal;
-			border-bottom: 4px solid $colour-tertiary;
-    padding-bottom: 5px;
-		}
-		& .fa-heart {
-			top: 25px;
-		}
-		& .btn {
+	border-radius: 30px 30px 0 0;
+	& h1 {
+		height: 50px;
+		font-family: "shrikhand";
+	}
+	& h2 {
+		display: block;
+		width: 40px;
+		font-weight: normal;
+		border-bottom: 4px solid $colour-tertiary;
+		padding-bottom: 5px;
+	}
+	& .fa-heart {
+		top: 25px;
+	}
+	& .btn {
 		margin: 40px;
 		align-self: center;
+	}
+}
+.menu__details__courses {
+	width: 100%;
+	padding: 10px 0;
+}
+.menu__details__dishes {
+	@include flexposition(flex-end, flex-start, flex-start, column wrap);
+	align-content: space-between;
+	width: 100%;
+	height: 60px;
+	margin: 10px 0;
+	border: 1px $colour-grey;
+	border-radius: 20px;
+	box-shadow: 3px 5px 8px $colour-grey;
+	cursor: pointer;
+
+	& h3,
+	p {
+		padding: 5px 15px;
+		@include mobile {
+			font-size: 12px;
 		}
 	}
-	.menu__details__courses {
-		width: 100%;
-		padding: 10px 0;
+	& strong {
+		position: absolute;
+		right: 10%;
 	}
-	.menu__details__dishes {
-		@include flexposition (flex-end,flex-start,flex-start,column wrap);
-		align-content: space-between;
-		width: 100%;
-		height: 60px;
-		margin: 10px 0;
-		border: 1px $colour-grey;
-		border-radius: 20px;
-		box-shadow: 3px 5px 8px $colour-grey;
-		cursor: pointer;
-		& h3, p {
-			padding: 5px 15px;
-		}
-		& strong {
-    position: absolute;
-	right: 40px;
-		}
-	}
+}

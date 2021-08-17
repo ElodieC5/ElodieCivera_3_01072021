@@ -5,13 +5,16 @@ footer {
 	color: $colour-white;
 	.footer {
 		&__logo {
-            font: 1.3em "Shrikhand";
+            font: 26px "Shrikhand";
 			padding-bottom: 5%;
 		}
 		&__li {
 			@include flexposition(flex-start, flex-start, left, row nowrap);
             padding-bottom: 10px;
 			font-size: 14px;
+			@include tablet-portrait {
+				font-size: 18px;
+			}
 		}
         &__li--bold {
         font-weight: bold;

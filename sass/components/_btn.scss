@@ -16,8 +16,12 @@
 }
 .fonctionne {
 	@include flexposition(space-around, flex-start, center, column nowrap);
-	height: 290px;
+	height: 300px;
 	margin: 5%;
+	@include tablet-portrait {
+		align-items: center;
+}
+
 	&__btn {
 		@include flexposition(flex-start, center, center, row nowrap);
 		position: relative; /*conditionne position i h & span*/
@@ -27,6 +31,10 @@
 		border-radius: 30px;
 		box-shadow: 0px 7px 7px $colour-grey;
 		background-color: lighten($colour-grey, 12%);
+		@include tablet-portrait {
+			width: 60%;
+			margin: auto;
+	}
 		& i {
 			position: absolute;
 			left: 30px;

@@ -12,47 +12,7 @@ body {
   margin: auto;
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-}
-
-h2 {
-  font-size: 18px;
-}
-
-h3 {
-  font-size: 16px;
-}
-
-h4 {
-  font-size: 14px;
-}
-
-p {
-  font-size: 14px;
-}
-
-strong {
-  font-size: 14px;
-  padding: 5px;
-}
-
-* {
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-}
-
-body {
+main {
   width: 100%;
   margin: auto;
 }
@@ -71,22 +31,46 @@ a {
 h2 {
   font-size: 18px;
 }
+@media (min-width: 650px) {
+  h2 {
+    font-size: 22px;
+  }
+}
 
 h3 {
   font-size: 16px;
+}
+@media (min-width: 650px) {
+  h3 {
+    font-size: 20px;
+  }
 }
 
 h4 {
   font-size: 14px;
 }
+@media (min-width: 650px) {
+  h4 {
+    font-size: 18px;
+  }
+}
 
 p {
   font-size: 14px;
 }
+@media (min-width: 650px) {
+  p {
+    font-size: 18px;
+  }
+}
 
 strong {
   font-size: 14px;
-  padding: 5px;
+}
+@media (min-width: 650px) {
+  strong {
+    font-size: 18px;
+  }
 }
 
 /* REMPLISSAGE COEURS */
@@ -203,8 +187,13 @@ strong {
   align-items: flex-start;
   text-align: center;
   flex-flow: column nowrap;
-  height: 290px;
+  height: 300px;
   margin: 5%;
+}
+@media (min-width: 650px) {
+  .fonctionne {
+    align-items: center;
+  }
 }
 .fonctionne__btn {
   display: flex;
@@ -220,6 +209,12 @@ strong {
   border-radius: 30px;
   box-shadow: 0px 7px 7px lightgrey;
   background-color: #f2f2f2;
+}
+@media (min-width: 650px) {
+  .fonctionne__btn {
+    width: 60%;
+    margin: auto;
+  }
 }
 .fonctionne__btn i {
   position: absolute;
@@ -347,6 +342,12 @@ header .__logo {
   font-size: 18px;
   width: 50px;
 }
+@media (min-width: 650px) {
+  .explore__rech {
+    height: 70px;
+    padding: 10px 40%;
+  }
+}
 
 input {
   background-color: lightgrey;
@@ -370,6 +371,11 @@ input::placeholder {
   height: 300px;
   padding: 13%;
 }
+@media (min-width: 650px) {
+  .explore__result {
+    padding: 8%;
+  }
+}
 
 /* DETAILS DES RESULTATS */
 .restaurants {
@@ -382,6 +388,12 @@ input::placeholder {
   width: 100%;
   height: 1230px;
   padding: 5%;
+}
+@media (min-width: 650px) {
+  .restaurants {
+    align-items: center;
+    padding: 5% 25%;
+  }
 }
 .restaurants__carte,
 .restaurants a {
@@ -425,6 +437,7 @@ input::placeholder {
 /* PAGES DES MENUS : page_1.html -> page_4.html */
 .menu {
   background-color: #f2f2f2;
+  width: 100%;
 }
 
 .menu__details {
@@ -436,7 +449,7 @@ input::placeholder {
   background-color: #f2f2f2;
   position: relative;
   top: -60px;
-  padding: 20px;
+  padding: 5%;
   border: 1px lightgrey;
   border-radius: 30px 30px 0 0;
 }
@@ -479,12 +492,19 @@ input::placeholder {
   box-shadow: 3px 5px 8px lightgrey;
   cursor: pointer;
 }
-.menu__details__dishes h3, .menu__details__dishes p {
+.menu__details__dishes h3,
+.menu__details__dishes p {
   padding: 5px 15px;
+}
+@media (max-width: 370px) {
+  .menu__details__dishes h3,
+.menu__details__dishes p {
+    font-size: 12px;
+  }
 }
 .menu__details__dishes strong {
   position: absolute;
-  right: 40px;
+  right: 10%;
 }
 
 footer {
@@ -494,7 +514,7 @@ footer {
   color: white;
 }
 footer .footer__logo {
-  font: 1.3em "Shrikhand";
+  font: 26px "Shrikhand";
   padding-bottom: 5%;
 }
 footer .footer__li {
@@ -505,6 +525,11 @@ footer .footer__li {
   flex-flow: row nowrap;
   padding-bottom: 10px;
   font-size: 14px;
+}
+@media (min-width: 650px) {
+  footer .footer__li {
+    font-size: 18px;
+  }
 }
 footer .footer__li--bold {
   font-weight: bold;
