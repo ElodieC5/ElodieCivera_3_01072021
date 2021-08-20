@@ -83,43 +83,55 @@ strong {
 
 /* ANIMATIONS */
 /* REMPLISSAGE COEURS */
-.restaurants__carte__heading .fa-heart,
-.menu__details .fa-heart {
-  font-size: 25px;
+.empty {
   color: lightgrey;
+  font-size: 25px;
   position: absolute;
   right: 30px;
-  /* c'est le hover sur l'empty qui déclenche la transition du full */
-}
-.restaurants__carte__heading .fa-heart.full,
-.menu__details .fa-heart.full {
-  opacity: 0;
-  transform: scale(0.1, 0.1);
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: opacity 500ms cubic-bezier(0.5, -0.1, 0.9, 1.2), transform 400ms 10ms cubic-bezier(0.5, -0.1, 0.9, 1.2);
-  transform-origin: bottom;
-}
-.restaurants__carte__heading .fa-heart.empty:hover + .full,
-.menu__details .fa-heart.empty:hover + .full {
-  opacity: 1;
-  transform: scale(1);
+  bottom: 30px;
 }
 
+.full {
+  opacity: 0;
+  color: #FF79DA;
+  font-size: 25px;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+.full:hover {
+  animation: heart 0.5s both cubic-bezier(0.5, -0.1, 0.9, 1.2);
+}
+
+@keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+    text-shadow: #9356DC 0.5px 0.5px 1px;
+  }
+  75% {
+    opacity: 0.7;
+    text-shadow: #9356DC 1px 1px 3px;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: #9356DC 2px 2px 5px;
+  }
+}
 /* DECOUVERTE DETAILS DU MENU */
 .menu__details__courses {
   animation: detailing 3s both cubic-bezier(0.5, -0.1, 0.9, 1.2);
 }
 .menu__details__courses--1 {
-  animation-delay: 1.05s;
+  animation-delay: 1.005s;
 }
 .menu__details__courses--2 {
-  animation-delay: 2.05s;
+  animation-delay: 2.005s;
 }
 .menu__details__courses--3 {
-  animation-delay: 3.05s;
+  animation-delay: 3.005s;
 }
 
 @keyframes detailing {
