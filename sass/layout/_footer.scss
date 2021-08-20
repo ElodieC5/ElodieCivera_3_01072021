@@ -23,6 +23,12 @@ footer {
 			font-weight: bold;
 			position: absolute;
 			left: 12%;
+			@include tablet {
+				left: 9%;
+			}
+			@include desktop {
+				left: 7%;
+			}
 		}
 	}
 }

@@ -99,7 +99,7 @@ strong {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: opacity 900ms cubic-bezier(0.5, -0.1, 0.9, 1.2), transform 800ms 10ms cubic-bezier(0.5, -0.1, 0.9, 1.2);
+  transition: opacity 500ms cubic-bezier(0.5, -0.1, 0.9, 1.2), transform 400ms 10ms cubic-bezier(0.5, -0.1, 0.9, 1.2);
   transform-origin: bottom;
 }
 .restaurants__carte__heading .fa-heart.empty:hover + .full,
@@ -116,10 +116,10 @@ strong {
   animation-delay: 1.05s;
 }
 .menu__details__courses--2 {
-  animation-delay: 2.1s;
+  animation-delay: 2.05s;
 }
 .menu__details__courses--3 {
-  animation-delay: 3.15s;
+  animation-delay: 3.05s;
 }
 
 @keyframes detailing {
@@ -163,16 +163,16 @@ strong {
 }
 .menu__details__dishes:hover strong, .menu__details__dishes:active strong {
   right: 25%;
-  transition: right 1s cubic-bezier(0.5, -0.1, 0.9, 1.2);
+  transition: right 500ms cubic-bezier(0.5, -0.1, 0.9, 1.2);
 }
 .menu__details__dishes:hover .checked, .menu__details__dishes:active .checked {
   transform: scaleX(1);
-  transition: transform 1s cubic-bezier(0.5, -0.1, 0.9, 1.2);
+  transition: transform 500ms cubic-bezier(0.5, -0.1, 0.9, 1.2);
   opacity: 1;
 }
 .menu__details__dishes:hover .checked > .fa-check-circle, .menu__details__dishes:active .checked > .fa-check-circle {
   transform: rotate(-360deg);
-  transition: transform 0.9s 0.4s ease-in-out;
+  transition: transform 0.5s 0.1s ease-in-out;
 }
 
 /* BOUTONS & ASSIMILES */
@@ -638,4 +638,14 @@ footer .footer__li--bold {
   font-weight: bold;
   position: absolute;
   left: 12%;
+}
+@media (min-width: 600px) {
+  footer .footer__li--bold {
+    left: 9%;
+  }
+}
+@media (min-width: 1100px) {
+  footer .footer__li--bold {
+    left: 7%;
+  }
 }
