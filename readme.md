@@ -1,4 +1,4 @@
-OpenClassrooms - Parcours Développement Front-End : Projet 3
+OpenClassrooms - Parcours Développement Front-End : Projet 3.
 Dynamisez une page web avec des animations CSS : “Ohmyfood”
 
 ... Mise en situation :
