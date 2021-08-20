@@ -122,16 +122,16 @@ strong {
 }
 /* DECOUVERTE DETAILS DU MENU */
 .menu__details__courses {
-  animation: detailing 3s both cubic-bezier(0.5, -0.1, 0.9, 1.2);
+  animation: detailing 1s both cubic-bezier(0.5, -0.1, 0.9, 1.2);
 }
 .menu__details__courses--1 {
-  animation-delay: 1.005s;
+  animation-delay: 1.001s;
 }
 .menu__details__courses--2 {
-  animation-delay: 2.005s;
+  animation-delay: 2.001s;
 }
 .menu__details__courses--3 {
-  animation-delay: 3.005s;
+  animation-delay: 3.001s;
 }
 
 @keyframes detailing {

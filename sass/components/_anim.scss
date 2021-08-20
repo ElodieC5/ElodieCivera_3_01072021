@@ -31,50 +31,50 @@
 // }
 
 .empty {
-            color: $colour-grey;
-            font-size: 25px;
-            position: absolute;
-            right: 30px;
-            bottom: 30px;
-        }
+	color: $colour-grey;
+	font-size: 25px;
+	position: absolute;
+	right: 30px;
+	bottom: 30px;
+}
 
-        .full {
-            opacity: 0;
-			color: $colour-secondary;
-            font-size: 25px;
-            position: absolute;
-            right: 30px;
-            bottom: 30px;
-            &:hover {
-                animation: heart .5s both cubic-bezier(0.5, -0.1, 0.9, 1.2);
-            }
-        }
-		@keyframes heart  {
-    0% {
-        opacity: 0;
-    }
+.full {
+	opacity: 0;
+	color: $colour-secondary;
+	font-size: 25px;
+	position: absolute;
+	right: 30px;
+	bottom: 30px;
+	&:hover {
+		animation: heart 0.5s both cubic-bezier(0.5, -0.1, 0.9, 1.2);
+	}
+}
+@keyframes heart {
+	0% {
+		opacity: 0;
+	}
 	50% {
-		opacity: .3;
-		text-shadow: $colour-primary .5px .5px 1px;
+		opacity: 0.3;
+		text-shadow: $colour-primary 0.5px 0.5px 1px;
 	}
 	75% {
-		opacity: .7;
+		opacity: 0.7;
 		text-shadow: $colour-primary 1px 1px 3px;
 	}
-    100% {
-        opacity: 1;
+	100% {
+		opacity: 1;
 		text-shadow: $colour-primary 2px 2px 5px;
-    }
+	}
 }
 
 /* DECOUVERTE DETAILS DU MENU */
 
 .menu__details__courses {
-	animation: detailing 3s both cubic-bezier(0.5, -0.1, 0.9, 1.2);
+	animation: detailing 1s both cubic-bezier(0.5, -0.1, 0.9, 1.2);
 
 	@for $i from 1 through 3 {
 		&--#{$i} {
-			animation-delay: #{$i + 0.005s};
+			animation-delay: #{$i + 0.001s};
 		}
 	}
 }
